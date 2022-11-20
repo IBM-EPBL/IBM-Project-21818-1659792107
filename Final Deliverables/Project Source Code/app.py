@@ -1,6 +1,8 @@
 from flask import Flask, render_template,request,redirect,url_for,session,flash
 import ibm_db
 #import os;
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 from newsapi import NewsApiClient
 app=Flask(__name__,template_folder='template')
 app.secret_key='a'
